@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta ch arset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Dashboard</title>
+    <link rel="stylesheet" href="welcome.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <h2>Menu</h2>        
+        </div>
+        <nav class="sidebar-header">
+            <a href="#" class="nav-link active" onclick="showComingSoon()">
+                <span class="nav-icon"></span> Dashboard
+            </a>
+            <a href="#" class="nav-link" onclick="showComingSoon()">
+                <span class="nav-icon"></span> Settings
+            </a>
+            <a href="#" class="nav-link" onclick="showComingSoon()">
+                <span class="nav-icon"></span> Help & Settings
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="logout-btn-sidebar" onclick="logout()">
+                <span class="nav-icon"></span> Logout
+            </button>
+        </div>
+    </div>
+
+    <div class="main-content">
+        <div class="welcome-card">
+            <h1 id="welcomeMessage">Welcome!</h1>
+            <div class="welcome-subtitle">Your Account Dashboard</div>
+            <div class="profile-section">
+                <h3>Profile Information</h3>
+                <div id="profileInfo"></div>
+                <div class="bio-section">
+                    <h3>About Me</h3>
+                    <p id="userBio" class="bio-text"></p>
+                </div>
+
+            <div class="skills-section">
+                <h3> My Skills</h3>
+                <div id="skillsContainer" class="skills-container"></div>
+                <div class="add-skill">
+                    <input type="text" id="newSkill" placeholder="Add your skill... (e.g., Phyton)">
+                    <button class="add-skill-btn" onclick="addSkill">+ Add</button>
+                </div>
+            </div>    
+                <button class="edit-btn" 
+                onclick="editProfile()"> Edit Profile
+            </button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="welcome.js"></script>
+</body>
+</html>

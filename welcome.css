@@ -1,0 +1,277 @@
+body{
+    background-color: #7367e1;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.dashboard-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar{
+    width: 260px;
+    background-color: #ffffff;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+}
+
+.sidebar-header{
+    padding: 30px 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.sidebar-header h2{
+    color: #7367e1;
+    font-size: 20px;
+    text-align: center;
+}
+
+.sidebar-nav{
+    flex: 1;
+    padding: 20px 0;
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.nav-link:hover{
+    background-color: #f0f0f0;
+}
+
+.nav-link.active{
+    background-color: #7367e1;
+    color: white;
+}
+
+.nav-icon{
+    font-size: 20px;
+}
+
+.sidebar-footer{
+    padding: 20px;
+    border-top: 1px solid #eee;
+}
+
+.logout-btn-sidebar{
+    width: 100%;
+    padding: 12px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: 0.3s;
+}
+
+.logout-btn-sidebar:hover{
+    background-color: #c82333;
+}
+
+.main-content{
+    flex: 1;
+    margin-left: 260px;
+    padding: 40px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+.welcome-card{
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: none;
+    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+h1{
+    color: #333;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.welcome-subtitle{
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 14px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.profile-section{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 10px;
+}
+
+.profile-section h3{
+    color: #7367e1;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.info-row{
+    padding: 6px 0;
+    display: block;
+    clear: both;
+}
+
+.info-label{
+    color: #666;
+    font-weight: bold;
+    display: inline-block;
+    width: 70px;
+    font-size: 14px;
+}
+
+.info-value{
+    color: #333;
+    display: inline;
+    font-size: 14px;
+    word-break: break-word;
+}
+
+.edit-btn{
+    width: auto;
+    padding: 10px;
+    background-color: #7367e1;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 12px;
+    font-size: 14px;
+}
+
+.edit-btn:hover{
+    background-color: #5a52b5;
+}
+
+.bio-section{
+    margin-top: 20px;
+    padding: 15px;
+    border-left: 4px solid #7367e1;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+}
+
+.bio-section h3{
+    color: #7367e1;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.bio-text{
+    color: #555;
+    line-height: 1.5;
+    font-size: 14px;
+    background-color: #f9f9f9;
+    padding: 12px;
+    border-radius: 8px;
+    margin: 0;
+
+}
+
+.skills-section{
+    margin-top: 12px;
+    padding-top: 12px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+.skills-section h3{
+    color: #7367e1;
+    margin-bottom: 8px;
+    font-size: 14px;
+}
+
+.skills-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 10px;
+    min-height: 35px;
+}
+
+.skill-tag{
+    background-color: #7367e1;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.skill-tag .remove-skill{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 12px;
+}
+
+.skill-tag .remove-skill:hover{
+    color: #ffcccc;
+}
+
+.add-skill{
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.add-skill input{
+    flex: 1;
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 13px;
+}
+
+.add-skill input:focus{
+    outline: none;
+    border-color: #7367e1;
+}
+
+.add-skill-btn{
+    padding: 6px 12px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.add-skill-btn:hover{
+    background-color: #218838;
+}

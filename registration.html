@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registration.css">
+</head>
+
+<body>
+
+    <div class="login-card">
+        <!-- THE CENTERED HEADING -->
+        <h1>REGISTRATION FORM</h1>
+
+    <!-- ALL INPUT FIELD-->
+    <div class="my-input">
+        <input type="text" class="my-input" id="firstname" placeholder="First Name">
+        <input type="text" class="my-input" id="lastname" placeholder="Last Name">
+        <input type="tel" class="my-input" id="phonenumber" placeholder="Phone Number">
+        <input type="text" class="my-input" id="gender" placeholder="Male, Female">
+        <input type="email" class="my-input" id="email" placeholder="Email">
+        <input type="password" class="my-input" id="password" placeholder="Password">
+
+        <textarea id="bio" rows="3" placeholder="Tell us more about yourself(optional)..."></textarea>
+    </div>
+
+    <!-- REGISTER BUTTON -->
+    <button type="button" class="btn" 
+    onclick="register()">REGISTER</button>
+
+    <!-- "ALREADY HAVE AN ACCOUNT BELOW BUTTON"-->
+    <p class="login-nav">
+        <a href="login.html">Already have an account?</a>
+    </p>
+    </div>
+    
+    <script>
+      function register() {
+    let firstname = 
+    document.getElementById("firstname").value;
+
+    let lastname =
+    document.getElementById("lastname").value;
+
+    let phone =
+    document.getElementById("phonenumber").value;
+    
+    let gender =
+    document.getElementById("gender").value;
+
+    let bio =
+    document.getElementById("bio").value;
+
+    let email =
+    document.getElementById("email").value;
+
+    let password =
+    document.getElementById("password").value;
+
+    if (!firstname || !lastname || !phonenumber || !gender || !email || !password) {
+        alert("Please fill all the necessary information");
+        return;
+    }
+
+    let user = {
+        firstname: firstname,
+        lastname: lastname,
+        phone: phone,
+        gender: gender,
+        bio: bio,
+        email: email,
+        password: password
+    };
+
+    localStorage.setItem(email,JSON.stringify(user));
+    alert("Registration successfull! Please login.");
+    window.location.href = "login.html";
+        }
+  </script>
+</body>
+</html>
+
+    

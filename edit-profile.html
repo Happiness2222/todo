@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit-profile</title>
+    <link rel="stylesheet" href="edit-profile.css">
+</head>
+<body>
+    
+    <div class="edit-card">
+        <h1>Edit Profile</h1>
+
+        <div class="edit-form">
+            <input type="text" id="firstname" placeholder="FirstName">
+            <input type="text" id="lastname" placeholder="LastName">
+            <input type="tel" id="phone" placeholder="PhoneNumber">
+            <input type="text" id="gender" placeholder="Male/Female">      
+
+            <textarea id="bio" rows="4" placeholder="Tell us about yourself...(e.g., I am a computer science student who is ready to learn coding and many more)"></textarea>      
+         <input type="email" id="email" placeholder="Email" readonly>
+            <small>Email cannot be changed</small>       
+        </div>
+
+    <div class="button-group">
+        <button class="btn-save"
+        onclick="saveProfile()">Save Any Changes</button>
+        <button class="btn-cancel"
+        onclick="cancelEdit()">Cancel</button>
+        </div>
+    </div>
+
+    <script src="edit-profile.js"></script>
+</body>
+</html>
